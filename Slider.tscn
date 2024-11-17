@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bqj630a7683lm"]
+
+[node name="HSlider" type="HSlider"]
+offset_left = 378.0
+offset_top = 32.0
+offset_right = 748.0
+offset_bottom = 188.0
+max_value = 1.0
+step = 0.01

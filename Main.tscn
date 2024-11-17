@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cahwwl4ik70i8"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hbnmc"]
+[ext_resource type="PackedScene" uid="uid://bvp206q0toad3" path="res://Shape.tscn" id="2_4p0me"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hbnmc")
+
+[node name="Shape" parent="." instance=ExtResource("2_4p0me")]
+position = Vector2(485, 282)
+scale = Vector2(1.5, 1.5)
+bezierPoints = Array[Vector2]([Vector2(200, 200), Vector2(200, 200), Vector2(1000, 200), Vector2(1000, 200)])
+
+[node name="Shape2" parent="Shape" instance=ExtResource("2_4p0me")]
+position = Vector2(57, 1)
+scale = Vector2(0.65, 0.65)
+bezierCuts = Array[float]([0.5, 1.0])
+bezierPoints = Array[Vector2]([Vector2(57, 0), Vector2(57, 75), Vector2(-57, 75), Vector2(-57, 0), Vector2(-57, 0), Vector2(-57, -75), Vector2(57, -75), Vector2(57, 0)])
+
+[node name="Shape" parent="Shape/Shape2" instance=ExtResource("2_4p0me")]
+position = Vector2(16.9231, 0)
+scale = Vector2(0.4, 0.4)
+bezierCuts = Array[float]([0.5, 1.0])
+bezierPoints = Array[Vector2]([Vector2(17, 0), Vector2(17, -21), Vector2(-17, -21), Vector2(-17, 0), Vector2(-17, 0), Vector2(-17, 21), Vector2(17, 21), Vector2(17, 0)])
